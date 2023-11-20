@@ -1,0 +1,30 @@
+* {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+
+#first-p::first-letter {
+  color: brown;
+}
+
+.paragraph::first-letter {
+  color: blue;
+  font-size: 30px;
+}
+
+.paragraph::first-line {
+  text-decoration: underline;
+}
+
+.paragraph::selection {
+  background-color: black;
+  color: white;
+}
+
+.extra-p::before {
+  content: '➡️';
+}
+
+.extra-p::after {
+  content: '💬';
+}
