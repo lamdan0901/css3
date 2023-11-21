@@ -2,6 +2,8 @@
   font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
+/* CSS Pseudo-elements */
+
 
 #first-p::first-letter {
   color: brown;
@@ -27,4 +29,95 @@
 
 .extra-p::after {
   content: '💬';
+}
+
+/* CSS Pseudo-classes */
+
+button:hover {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+input:focus {
+  border-color: #00a0e3;
+  box-shadow: 0 0 5px #00a0e3;
+}
+
+ul li:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+ul li:first-child {
+  font-weight: bold;
+}
+
+ul li:last-child {
+  font-style: italic;
+}
+
+input:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* HTML Table  */
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #333;
+  color: #fff;
+}
+
+tr {
+  border: 1px solid #ccc;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ffc107;
+  cursor: pointer;
+}
+
+/* CSS Display props */
+
+.inline-element,
+span {
+  display: inline;
+  background-color: yellow;
+}
+
+.block {
+  display: block;
+  background-color: blue;
+  color: white;
+}
+
+button.my-button {
+  display: inline-block;
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+}
+
+.hidden-element {
+  display: none;
 }

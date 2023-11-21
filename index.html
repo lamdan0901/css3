@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <!-- CSS Pseudo-elements -->
+  <!-- TODO: CSS Pseudo-elements -->
 
   <!-- Pseudo-elements are like "virtual" elements in CSS 
     that allow you to style specific parts of an element, without having to add extra HTML. -->
@@ -22,6 +22,8 @@
 
   <!-- Some examples: ::before, ::after, ::first-letter, ::first-line, ::selection ...  -->
 
+  <!-- Ref link: https://www.w3schools.com/css/css_pseudo_elements.asp -->
+
   <p id="first-p" class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum quia tempore
     ipsum modi magnam error officia,
     autem fugit, blanditiis quo quis mollitia amet. Omnis accusamus, iure vel voluptate officia ipsam!</p>
@@ -32,18 +34,115 @@
 
   <p class="extra-p">Extra paragraph</p>
 
-  <div>
-    <h3>This is a Heading 3</h3>
-    <h4>This is a Heading 4</h4>
-    <h4>This is a Heading 4.2</h4>
+  <!-- TODO: CSS Pseudo-classes -->
 
-    <p class="paragraph">This is a paragraph 3.</p>
-    <section>
-      <p>child element 2</p>
-      <span>span1</span>
-      <span>span2</span>
-    </section>
-  </div>
+  <!-- Pseudo-classes in CSS are used to define a special state or condition of an HTML element 
+    that cannot be targeted using just the element's name or class alone. 
+    They allow you to style elements based on user interactions, element attributes, and other criteria -->
+
+  <!-- Some examples: :hover, :active, :focus, :nth-child() first-child, :last-child, :disabled ... -->
+
+  <!-- Ref link: https://www.w3schools.com/css/css_pseudo_classes.asp -->
+
+  <button>Hover Me</button>
+
+  <a href="#">Click Me</a>
+
+  <input type="text" placeholder="Type something">
+  <input type="text" placeholder="Disabled Input" disabled>
+
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
+
+  <!-- TODO: HTML Table  -->
+
+  <!-- <table>: Defines the start of a table. Tables are used to display data in rows and columns.
+
+    <thead>: Represents the table header section, which contains column headers.
+    
+    <tr>: Stands for "table row" and is used to define a row within the table.
+    
+    <th>: Represents a table header cell, which contains column headings or labels. They are typically bold and centered by default.
+    
+    <tbody>: Represents the table body section, which contains the main data rows.
+    
+    <td>: Represents a table data cell, which contains the actual data within the table. These cells are typically left-aligned by default. -->
+
+  <!-- Ref link: https://www.w3schools.com/html/html_tables.asp -->
+
+  <h1>Student Information Table</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Student ID</th>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>001</td>
+        <td>John Doe</td>
+        <td>20</td>
+      </tr>
+      <tr>
+        <td>002</td>
+        <td>Jane Smith</td>
+        <td>22</td>
+      </tr>
+      <tr>
+        <td>003</td>
+        <td>Bob Johnson</td>
+        <td>19</td>
+      </tr>
+      <tr>
+        <td>004</td>
+        <td>Edward Snowden</td>
+        <td>39</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- TODO: CSS Display props  -->
+
+  <!-- 
+    display: inline elements flow inline with text and don't create line breaks. 
+      Can set width, height. Only set margin, padding left and right.
+      Examples include <a>, <span>, and <em> tags.
+
+    display: block elements create a block-level container that takes up the full width available and starts on a new line.
+      Can set width, height, padding, margin.
+      Examples include <div>, <p>, and <h1> tags.
+
+    display: inline-block elements flow inline but can have block-level properties like width and height.
+     It is a hybrid of inline and block elements.
+     Can set width, height, padding, margin.
+     Examples include buttons, images, and some form elements.
+
+    display: none: elements are completely removed from the page's layout and becomes invisible.
+      It doesn't take up any space, and it's as if the element doesn't exist in the document structure.
+      It's often used to hide elements dynamically with JavaScript or to hide content for accessibility purposes.
+
+    These display properties are essential for controlling how elements are laid out on a web page 
+  and how they interact with other elements. -->
+
+  <!-- Ref link: https://www.w3schools.com/cssref/pr_class_display.php -->
+
+  <p class="inline-element">This is an <span>inline</span> element.</p>
+  <span>Another inline element</span>
+
+  <p class="block">This is a block-level element.</p>
+  <p class="block">It starts on a new line.</p>
+
+  <button class="my-button">This is an inline-block element.</button>
+  <button class="my-button">It flows horizontally but has block properties.</button>
+  <button class="hidden-element">Hidden</button>
+
 </body>
 
 </html>
