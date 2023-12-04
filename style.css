@@ -24,7 +24,7 @@
 }
 
 .extra-p::before {
-  content: '➡️';
+  content: '';
 }
 
 .extra-p::after {
@@ -39,7 +39,7 @@ button:hover {
 }
 
 a:active {
-  text-decoration: underline;
+  text-decoration: line-through;
 }
 
 input:focus {
@@ -47,8 +47,8 @@ input:focus {
   box-shadow: 0 0 5px #00a0e3;
 }
 
-ul li:nth-child(even) {
-  background-color: #f2f2f2;
+ul li:nth-child(odd) {
+  background-color: blue;
 }
 
 ul li:first-child {
@@ -79,17 +79,17 @@ th, td {
   text-align: left;
 }
 
+td:not(:last-child) {
+  border-right: 1px solid black;
+}
+
 th {
   background-color: #333;
   color: #fff;
 }
 
-tr {
-  border: 1px solid #ccc;
-}
-
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #ddd;
 }
 
 tr:hover {
@@ -99,16 +99,19 @@ tr:hover {
 
 /* CSS Display props */
 
-.inline-element,
+/* .inline-element, */
 span {
-  display: inline;
   background-color: yellow;
+  margin: 20px 20px;
+  padding: 20px 20px;
 }
 
 .block {
   display: block;
   background-color: blue;
   color: white;
+  width: 200px;
+  height: 60px;
 }
 
 button.my-button {
@@ -116,6 +119,8 @@ button.my-button {
   background-color: green;
   color: white;
   padding: 10px 20px;
+  width: 200px;
+  height: 60px;
 }
 
 .hidden-element {
