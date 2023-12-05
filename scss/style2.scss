@@ -1,0 +1,80 @@
+// 5 Modules
+// @use 'variables';
+
+// 4. Partials (import and use partial)
+// @import 'reset';
+
+// 2. Variables
+$primary-color: black;
+$font-stack: Helvetica, sans-serif;
+
+body {
+  color: $primary-color;
+  font-family: $font-stack;
+  // background-color: variables.$primary-color2;
+}
+
+// 3. Nesting
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+
+// 6. Mixins
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.box {
+  @include border-radius(10px);
+  background-color: rgb(39, 116, 184);
+  width: 500px;
+  height: 50px;
+  margin: 10px;
+}
+
+// 7. Extend/Inheritance
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  @extend .message;
+  border-color: green;
+}
+
+// 8. Operators
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+article[role="main"] {
+  float: left;
+  width: calc(600px / 960px) * 100%;
+  // we can do calculation without calc but that
+  // feature will be deprecated soon
+}
+
+aside[role="complementary"] {
+  float: right;
+  width: calc(300px / 960px) * 100%;
+}
