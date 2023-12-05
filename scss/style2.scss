@@ -72,6 +72,13 @@ article[role="main"] {
   width: calc(600px / 960px) * 100%;
   // we can do calculation without calc but that
   // feature will be deprecated soon
+  // we can also use math.div()
+
+  // Use calc() if you need to perform calculations
+  // involving relative units like percentages, 
+  // viewport units, etc., which might not be known until the page is rendered. 
+  // For other cases, especially with known values, 
+  // math.div() is more efficient.
 }
 
 aside[role="complementary"] {
