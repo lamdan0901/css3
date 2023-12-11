@@ -3,36 +3,77 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
-nav ul {
+nav + ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-nav li {
+nav > li {
   display: inline-block;
+  color: rgb(106, 187, 106);
 }
-nav a {
+nav > li > a {
   display: block;
   padding: 6px 12px;
   text-decoration: none;
 }
 
+.btn {
+  background: blue;
+  color: white;
+}
+.btn:hover {
+  background: darkblue;
+}
+.btn--primary {
+  background: green;
+}
+
+.widget {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
 .box {
-  border-radius: 10px;
+  border-radius: 15px;
+  text-align: center;
+  vertical-align: middle;
   background-color: rgb(39, 116, 184);
   width: 500px;
   height: 50px;
   margin: 10px;
+  color: white;
 }
 
-.message, .success {
+.message, .error-msg, .success-msg {
   border: 1px solid #ccc;
   padding: 10px;
   color: #333;
 }
 
-.success {
+.success-msg {
   border-color: green;
+}
+
+.error-msg {
+  border-color: red;
+}
+
+.button-secondary, .button-primary {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+.button-primary {
+  background-color: blue;
+  color: white;
+}
+
+.button-secondary {
+  background-color: red;
+  color: white;
 }
 
 .container {

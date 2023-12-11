@@ -6,8 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./scss/style2.css">
-  <title>SASS/SCSS</title>
+  <title>CSS 5</title>
 </head>
+
+<!-- abc.scss -->
 
 <body>
   <!-- SASS/SCSS  -->
@@ -18,43 +20,101 @@
   They provide mechanisms not available in standard CSS, such as variables, nesting, mixins, and more,
   which make your CSS more maintainable and easier to write. -->
 
+
   <!-- TODO 2. Variables -->
   <!-- Variables in SCSS/SASS allow you to store values that you can reuse throughout your stylesheet. -->
+
 
   <!-- TODO 3. Nesting -->
   <!-- Nesting is a handy feature that allows you to write your CSS in a way that mirrors your HTML structure, 
   which can make your code more readable. -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+
+      <article role="main">main article</article>
+      <article role="complementary">complementary article</article>
+    </ul>
+  </nav>
+
+  <!-- Avoid Deep Nesting: Try not to nest more than three levels deep.
+  Deep nesting can create overly specific selectors which are hard to override and can lead to CSS bloat.
+  
+  Use Parent Selector Wisely: The & symbol is powerful but can lead to complex selectors
+  if not used carefully.
+  
+  Readability: Always prioritize the readability and maintainability of your code.
+  Nesting should make your code cleaner, not more complicated. -->
+
 
   <!-- TODO 4. Partials -->
   <!-- Partials are small SCSS files that contain snippets of CSS that you can include in other SCSS files. 
   This is a great way to modularize your CSS and make it easier to maintain. 
+  
   A partial is named with a leading underscore (e.g., _reset.scss).
   This underscore (`_`) tells Sass that this file is a partial and 
   should not be generated into a CSS file when Sass is compiled.  -->
+
 
   <!-- TODO 5. Modules -->
   <!-- SCSS modules (introduced with the @use rule) let you encapsulate styles and only import what you need, 
   avoiding namespace collisions and providing better code organization. -->
 
-  <!-- TODO 6. Mixins -->
-  <!-- Mixins allow you to create reusable sets of CSS properties. -->
-  <div class="box">this is the box</div>
-
-  <!-- TODO 7. Extend/Inheritance -->
-  <!-- This feature lets you share a set of CSS properties from one selector to another. -->
-
-  <!-- TODO 8. Operators -->
-  <!-- SCSS supports standard mathematical operators like +, -, *, /, and % for numbers. -->
-
-
-
-  <!-- TODO Key Differences between Partials and Modules  -->
+  <!-- ? Key Differences between Partials and Modules  -->
   <!-- 1. Naming Convention: Partials start with an underscore _, but modules don't necessarily have to.
   2. Compilation: Partials are not meant to be compiled to CSS files on their own, 
   while modules can be if they are not prefixed with an underscore.
   3. Import Method: Partials are imported using @import, while modules use the @use rule.
   4. Scope and Namespace: With modules, you get the benefits of scoping and namespacing, 
   reducing the risk of variable and mixin name conflicts across different files. -->
+
+
+  <!-- TODO 6. Mixins -->
+  <!-- Mixins allow you to create reusable sets of CSS properties. -->
+  <div class="box message">this is the box</div>
+
+  <!-- ? Best Practices -->
+  <!-- Clarity: Use mixins for code that’s repeated in multiple places.
+  It makes your code easier to read and maintain.
+
+  Performance: While mixins can help reduce repetition,
+  using too many can increase your CSS size. Use them judiciously.
+
+  Naming: Choose clear and descriptive names for your mixins.
+  This makes your stylesheets easier to understand. -->
+
+
+  <!-- TODO 7. Extend/Inheritance -->
+  <!-- This feature lets you share a set of CSS properties from one selector to another.
+  It's a powerful feature for keeping your CSS DRY (Don't Repeat Yourself) and organized, 
+  but it should be used judiciously to avoid unintended side effects. -->
+
+  <!-- Extending Placeholders '%'
+  They are like classes, but they don't get compiled to CSS on their own. 
+  They only get output when extended. -->
+
+  <button class="button-primary">button1</button>
+  <button class="button-secondary">button2</button>
+
+  <!-- ? Best Practices and Caveats -->
+  <!-- Overuse Warning: Overusing @extend can lead to complex, hard-to-understand style relationships
+  and potential code bloat due to the generation of long selectors.
+
+  Selector Specificity: Be mindful of selector specificity.
+  Extending a complex selector can create overly specific rules and unexpected styles.
+
+  Placeholders vs Mixins: Use placeholders when you want to share styles
+  without producing additional CSS unless extended.
+  Use mixins when you need to pass arguments or when extending would produce unwanted side effects.
+
+  Maintainability: Ensure that your use of @extend doesn't compromise the maintainability of your code.
+  It should make your codebase cleaner and more straightforward, not more complicated. -->
+
+  <!-- TODO 8. Operators -->
+  <!-- SCSS supports standard mathematical operators like +, -, *, /, and % for numbers. -->
+
+
 
 </body>
 
