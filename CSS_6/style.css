@@ -1,0 +1,36 @@
+body {
+  font-size: 20px;
+}
+
+.container {
+  background-color: blueviolet;
+  color: white;
+}
+.container-sm {
+  background-color: green;
+  color: white;
+}
+.container-md {
+  background-color: greenyellow;
+}
+.container-lg {
+  background-color: grey;
+  color: white;
+}
+.container-xl {
+  background-color: goldenrod;
+}
+.container-xxl {
+  background-color: burlywood;
+}
+.container-fluid {
+  background-color: darkseagreen;
+}
+.height-60 {
+  height: 60px;
+}
+
+.col:nth-child(odd) {
+  background-color: aquamarine;
+  color: black;
+}
